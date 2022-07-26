@@ -28,11 +28,10 @@ def threats(board):
         for j in range(i+1,len(board)):
             if board[i] == board[j]:
                 count += 1
-    for i in range(len(board)-1):
-        for j in range(i+1,len(board)):
-            if board[i] == board[j] + j - i or board[i] == board[j] + i -j:
+            elif board[i] == board[j] + j - i or board[i] == board[j] + i -j:
                 print(str(i) + 'i')
                 print(str(j) + 'j')
+                count += 1
     print(count)
     return count
 board = create_board(n)
